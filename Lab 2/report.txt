@@ -1,0 +1,90 @@
+==============================
+==============================
+  _           _       ___  
+ | |         | |     |__ \ 
+ | |     __ _| |__      ) |
+ | |    / _` | '_ \    / / 
+ | |___| (_| | |_) |  / /_ 
+ |______\__,_|_.__/  |____|
+                           
+==============================
+==============================
+
+Tan Li Hau
+U1222847D
+Lab Group SS1
+
+
+line1.wrl 
+ - Shows a line obtained from parametric equation x=u, y=u, with parameters from [-1, 1] and resolution of 4.
+
+line2.wrl
+ - Shows a straight line with parametric equation x=u y=-u. Parametric domain is [-1, 1]. Sampling resolution is 36.
+ - A straight line with gradient = -1, starting with point (0,0)
+
+line3.wrl
+ - Shows a straight line with parametric equation x=u y=-u. Parametric domain is [0, 1]. Sampling resolution is 36.
+ - A straight line connecting from points (0.2, -0.3) and (-0.4, 0.3)
+
+arc1.wrl
+ - Shows an arc obtained from parametric equations of x=cos(u*pi), y=sin(u*pi). Parameter domain is [0, 0.5], Sampling resolution is 36
+ - An arc of unit circle in the 1st quadrant.
+
+arc2.wrl
+ - Shows an arc obtained from parametric equations of x=cos(u*pi), y=sin(u*pi). Parameter domain is [0.5, 1], Sampling resolution is 36
+ - Arc is a arc of unit circle in the 2nd quadrant.
+
+arc3.wrl
+ - Arc obtained from parametric equations of x=0.2*cos(u*pi)+0.5, y=0.2*sin(u*pi)+0.3. Parameter domain is [0, 0.5], Sampling resolution is 36
+ - arc is a arc of a circle of radius 0.2 center at (0.5, 0.3) in the 1st quadrant.
+
+circle1.wrl
+ - circle obtained from parametric equation x=cos(u*pi), y=sin(u*pi). Parameter domain is [0,2] Sampling resolution is 100
+
+circle2.wrl
+ - circle obtained from parametric equation x=cos(u*pi), y=sin(u*pi). Parameter domain is [0,2] Sampling resolution is 4
+ - Shows a square, which was rotated by pi/4 counterclockwise by using an offset pi/4 in the cos and sin functions.
+
+ellipse1.wrl
+ - Ellipse obtained from parametric equations of x=0.2*cos(u*pi), y=0.6*sin(u*pi). Parameter domain is [0, 2], Sampling resolution is 36
+ - ellipse with major axis of 0.6 and minor axis of 0.2, center at (0,0)
+
+ellipse2.wrl
+ - ellipse obtained from parametric equations of x=0.4*cos(u*pi)+0.3, y=0.1*sin(u*pi)-0.2. Parameter domain is [0, 2], Sampling resolution is 36
+ - ellipse with major axis of 0.4 and minor axis of 0.1, center at (0.3,-0.2)
+
+3dline1.wrl
+ - 3d straight line obtained from parametric equations of x=u, y=u, z=u. Parameter domain is [-1,1], Sampling resolution is 36
+ - straight line connected from points (0,0,0) and (1,1,1)
+
+3dline2.wrl
+ - 3d straight line obtained from parametric equations of x=u, y=u, z=u. Parameter domain is [0,1], Sampling resolution is 36
+ - straight line connected from points (-0.3,0.6,-0.2) and (0.3,0.5,0.8)
+
+3dcurve1.wrl
+ - 3d curve obtained from parametric equations of x=cos(u), y=sin(u), z=0. Parameter domain is [0,8], Sampling resolution is 800
+ - Resulted curve is a circle on x-y plane with radius 1
+
+3dcurve2.wrl
+ - 3d curve obtained from parametric equations of x=u*cos(u)/8, y=u*sin(u)/8, z=0. Parameter domain is [0,8], Sampling resolution is 800
+ - resulted curve is a circle on x-y plane with radius increasing from 0 to 1
+
+3dcurve3.wrl
+ - 3d curve obtained from parametric equations of x=u*cos(u)/8, y=u*sin(u)/8, z=u/8. Parameter domain is [0,8], Sampling resolution is 800
+ - resulted curve is a circle of radius increasing from 0 to 1, and z from 0 to 1
+
+3dcurve4.wrl
+ - 3d curve obtained from parametric equations of x=cos(u)/8, y=sin(u)/8, z=u/8. Parameter domain is [0,8], Sampling resolution is 800
+ - resulted curve is a circle of radius increasing from 1, and z from 0 to 1
+
+3dcurve5.wrl
+ - 3d curve obtained from parametric equations of x=cos(u*pi+u), y=sin(u*pi+3*u), z=cos(u*pi+2*u). Parameter domain is [0,8], Sampling resolution is 800
+
+tut3a.wrl
+ - Tutorial question 3
+
+tut4a.wrl
+ - Tutorial question 4a
+
+tut4b.wrl
+ - Tutorial question 4b

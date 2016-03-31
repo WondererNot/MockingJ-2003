@@ -1,0 +1,112 @@
+#VRML V2.0 utf8
+# Copyright by Liu Qi and Alexei Sourin
+EXTERNPROTO FGeometry [
+exposedField SFString definition
+exposedField MFFloat parameters
+exposedField MFInt32 resolution
+	exposedField SFVec3f bboxCenter
+	exposedField SFVec3f bboxSize
+	exposedField SFString type
+	exposedField MFNode	parents
+	exposedField SFVec2f timeSpan 
+] "http://www3.ntu.edu.sg/home/assourin/FVRML/FVRML.wrl#FGeometry"
+EXTERNPROTO FMaterial [
+	exposedField SFString diffuseColor
+	exposedField SFString type
+	exposedField MFColor patternColor
+	exposedField MFFloat patternKey
+	exposedField SFString ambientIntensity
+	exposedField SFString emissiveColor
+	exposedField SFString shininess
+	exposedField SFString specularColor
+	exposedField SFString transparency
+	exposedField MFFloat parameters
+	exposedField MFNode	parents
+	exposedField SFVec2f timeSpan
+] "http://www3.ntu.edu.sg/home/assourin/FVRML/FVRML.wrl#FMaterial"
+EXTERNPROTO FTexture3D [
+	exposedField SFString definition
+	exposedField SFString type
+	exposedField MFFloat parameters
+	exposedField MFNode	parents
+	exposedField SFVec2f timeSpan
+] "http://www3.ntu.edu.sg/home/assourin/FVRML/FVRML.wrl#FTexture3D"
+EXTERNPROTO FAppearance [
+	exposedField SFNode	material
+	exposedField SFNode	texture
+	exposedField SFNode	textureTransform
+	exposedField SFNode	texture3D
+	exposedField MFNode	parents
+	eventIn	SFBool refresh
+] "http://www3.ntu.edu.sg/home/assourin/FVRML/FVRML.wrl#FAppearance"
+EXTERNPROTO FShape [
+	exposedField SFNode	geometry
+	exposedField SFNode	appearance
+	exposedField SFString polygonizer
+	exposedField MFNode	parents
+	exposedField SFTime	startTime
+	exposedField SFTime stopTime
+    exposedField SFTime cycleInterval
+    exposedField SFBool	loop
+	exposedField SFBool	enabled
+	eventOut SFTime	cycleTime
+	eventIn SFFloat set_fraction
+	field SFInt32 frames
+] "http://www3.ntu.edu.sg/home/assourin/FVRML/FVRML.wrl#FShape"
+EXTERNPROTO FTransform [
+	exposedField SFString operation
+	exposedField SFString type
+	exposedField SFString polygonizer
+	exposedField MFFloat parameters
+	exposedField SFString center
+	exposedField SFString rotation
+	exposedField SFString scale
+	exposedField SFString scaleOrientation
+	exposedField SFString translation
+	exposedField MFNode children
+	exposedField MFNode	parents
+	eventIn	SFBool refresh
+    exposedField SFVec2f timeSpan
+	exposedField SFTime	startTime
+	exposedField SFTime stopTime
+    exposedField SFTime cycleInterval
+    exposedField SFBool	loop
+	exposedField SFBool	enabled
+	eventOut SFTime	cycleTime
+	eventIn SFFloat set_fraction
+	field SFInt32 frames
+] "http://www3.ntu.edu.sg/home/assourin/FVRML/FVRML.wrl#FTransform"
+FShape {
+polygonizer "analytical"
+	loop FALSE
+	cycleInterval 1
+	appearance FAppearance {
+		material FMaterial {
+			diffuseColor "function frep(x1,y1,z1,t){
+u=x1*(1)+y1*(0)+z1*(0)+(0);
+v=x1*(0)+y1*(1)+z1*(0)+(0);
+w=x1*(0)+y1*(0)+z1*(1)+(0);
+r=0.7;g=0.7;b=0.7;
+return 0;}"
+			patternKey [0.3, 0.7]
+			patternColor [0 1 0, 1 0 0]
+			timeSpan 0 1
+		}
+		texture3D FTexture3D {
+			definition "0"
+			timeSpan 0 1
+         type "displacement"
+		}
+	}
+	geometry FGeometry {
+		definition "x=-1+u*(1+1)+v*(-1+1+u*(1+1-1-1));
+					y=1+u*(0-1)+v*(0-1+u*(1.5-0-0+1));
+					z=-1+u*(-1+1)+v*(1+1+u*(1-1+1-1));"
+		parameters [0, 1, 0, 1, 0, 1]
+		bboxSize 2.5 2.5 2.5
+		bboxCenter 0 0 0
+		resolution [100, 100, 100]
+		timeSpan 0 1
+	}
+}
+Inline {url "http://www3.ntu.edu.sg/home/assourin/FVRML/CoordinateAxes.wrl"}
